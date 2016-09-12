@@ -3,3 +3,19 @@ tutoriales game maker
 
 https://www.udemy.com/learn-everything-in-gamemaker-studio/learn/v4/overview
 Curso de Game Maker Udemi
+
+https://es.wikipedia.org/wiki/Kit_de_desarrollo_de_software
+SDK
+
+
+http://www.escueladevideojuegos.net/frameworks-librerias-bibliotecas-recopilacion/
+Frameworks, Librerias, Biblotecas
+
+
+FRAMEWORK
+http://cocos2d.org/
+http://phaser.io/
+
+LIBRERIA
+SFML: Biblioteca
+
