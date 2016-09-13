@@ -19,3 +19,24 @@ http://phaser.io/
 LIBRERIA
 SFML: Biblioteca
 
+
+http://www.inventati.org/estupidezartificial/manual.html
+
+Game Maker
+https://es.wikipedia.org/wiki/GameMaker:_Studio
+http://game-maker.galeon.com/aficiones2241197.html
+http://www.yoyogames.com/
+http://gamemaker.wikia.com/wiki/Game_Maker
+http://www.gamemakerblog.net/
+
+PROGRAMACION GML
+http://niuweb-cursos.byethost7.com/index.html?i=1
+http://www.inventati.org/estupidezartificial/manual.html
+
+
+Juegos desarrollados con Game Maker
+https://www.reddit.com/r/gamedev/comments/1fgncr/spelunky_hotline_miami_super_crate_box_theyre_all/
+https://www.youtube.com/watch?v=WuU1tEF1xYs
+
+
+
