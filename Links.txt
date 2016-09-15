@@ -19,6 +19,8 @@ http://phaser.io/
 LIBRERIA
 SFML: Biblioteca
 
+HERRAMIENTAS
+http://www.piskelapp.com/ crear sprites
 
 http://www.inventati.org/estupidezartificial/manual.html
 
