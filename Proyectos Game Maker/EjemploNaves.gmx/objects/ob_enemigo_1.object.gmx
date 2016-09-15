@@ -227,11 +227,11 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>ob_enemigo_1.x</string>
+            <string>0</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>ob_enemigo_1.y</string>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
