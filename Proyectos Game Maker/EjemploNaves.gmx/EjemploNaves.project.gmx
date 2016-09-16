@@ -36,6 +36,9 @@
     <object>objects\ob_bala_enemigos</object>
     <object>objects\ob_bala_enemigo_dos</object>
     <object>objects\ob_enemigo_1</object>
+    <object>objects\ob_enemigo_dos</object>
+    <object>objects\ob_enemigo_tres</object>
+    <object>objects\ob_director_</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\ro_nivel_uno</room>

@@ -54,9 +54,8 @@
     <instance objName="ob_player" x="400" y="840" name="inst_D2AD3D80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_vida" x="0" y="40" name="inst_1E9E0220" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_vida" x="600" y="240" name="inst_779C750C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_enemigo_1" x="120" y="0" name="inst_0D4A9971" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_enemigo_1" x="640" y="-40" name="inst_D01D0F10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_enemigo_1" x="360" y="0" name="inst_824F4411" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_director_" x="1560" y="639" name="inst_50D07873" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_director_" x="-80" y="480" name="inst_AC5A0566" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
