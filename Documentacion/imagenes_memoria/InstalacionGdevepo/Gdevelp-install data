@@ -1,3 +1,57 @@
 1. Descargar paquete de instalación desde la web oficial http://compilgames.net/main-es.html el paquete tiene un peso de aproximadamente 109 mb.
 2. Seguir los pasos de instalación, en un momento de la misma nos indica si queremos instalar no solo el paquete principal sino que podemos añadir al mismo ejemplos y recursos (imagenes, sprites..)
 3- El proceso de instalacción en el equipo de prueba* (indicarlo en alguna parte los requisitos de mi ordenador y conexión a internet) ha durado 8 minutos y 26 segundos, y el programa con la instalacción de los ejemplos y los recursos en el equipo instalado tiene un peso de 572 Mb
+
+
+
+//Un punto imporante es que los tutoriales oficiales de Gdevelop vienen con los Sprites sets de los ejemplos que se realizan para hacer más rápido la realización del juego 
+
+
+INTERFAZ-
+//Un punto importante la interfaz es que todo el programa esta en castellano.
+
+
+FACILIDAD DE USO
+Al crear un proyecto Gdevelop nos da la opción de elegir el tipo de juego que deseamos hacer e incluye toda una serie de elementos .......
+También nos pregunta que tipo de proyecto queremos hacer si una aplicación nativa para el sistema operativo que estamos utilizando si HTML5 o Windows( o el sistema operativo en el que estemos programando)
+
+
+Crear un proyecto-
+Archivo -> Crear proyecto nuevo -> creación de proyecto vacio 
+
+Añadir un sprite-
+Editor de objetos -> Objetos (secundario) ->Nuevo Objeto->Sprite->Añadimos la imagen.
+Añadir Tiles para mapa y objetos -> Objetos (Secundario)->Nuevo Objeto->Mosaico-> Indicamos el tamaño->Añadimos la imagen.
+
+Dar movimiento al jugador
+Pulsar dos veces en el Sprite player y se nos abrirá las opciones del objeto. Editar comportamiento->Objeto que se desplaza sobre plataformas ->definimos los paramametros que deseemos que tenga el objeto.
+
+Marcar objeto como plataforma sobre la que el objeto se mueve
+(Explicar como funciona lo de objeto se desplaza sobre plataforma y plataforma)
+
+Animar un objeto
+--Ir a las opciones del objeto->en animación ir añadiendo las distintas animaciones ( es conveniente nombrarlas (solo se puede renombrar por las opciones uqe el programa da) para poder identificarlas mejor), para las animaciones de un mismo tipo añadir todas las imagenes en una animación e indicar ->en bucle y el tiempo 
+Pero tenemos que asignarla a un evento ya que si no el objeto estaria moviendose todo el rato, en el caso de un plataformas lo hacemos con un evento y un subevento
+1- Cuando el objeto este por el suelo y en movimiento le ponemos la animación en movimiento.
+2- Cuando el objeto este por el suelo y quieto le ponemos la animación de parado.
+Podemos mejorar esta animación añadiendo más eventos que roten el sprite para que mire en la dirección correcta :
+	UN EVENTO PARA LA IZQUIERDA: y asignandole la acción Sprite->Efectos->invertir objeto horizontalmente 
+	Otro para la derecha que haga lo mismo pero en la otra dirección
+
+Animación de salto
+Para agregar la animación del salto debemos introducirla a través de un evento, seleccionar los Escena, -nuevo evento elegir el tipo "Comportamiento plataformas->Esta saltando->elegir el objeto 
+-Ahora ya tenemos el evento creado queda añadir las acciones que se desean que pasen cuando el evento suceda, ahora seleccionamos la categoria de acciones Srpite->Animaciones e imagenes->Cambiar la animación-> seleccionamos el objeto y la animacion deseada, ya tenemos creada la acción pero ahora se mantiene en esa animación hay que crear el evento para volver a su animacion normal que lo hacemos con un evento con la acción al caer le volvemos a poner su animación
+
+Animación al moverse
+
+
+
+
+//Para colocar los objetos siemplemente con arrastrarlo desde el menú de objetos a la escena aparecen y podemos redimensinarlos si el Sprite no tiene imagen el programa no dejará añadirlo a la escena 
+
+
+http://wiki.compilgames.net/doku.php/gdevelop/tutorials/howtomakeeaplatformergame
+Tutorial
+
+Otros
+//Un error o aviso importante es que el programa no tienen ningun tipo de aviso de cerrar el proyecto por lo que si cerramos el programa sin querer, no mostrará ningun mensaje por lo que perderemos todos los datos no guardados hasta que no guardas la primera vez, pero el sistema de guardado falla bastante a lo largo de la realización de las pruebas 3 veces se han perdido los datos por no funcionar de una manera correcta
