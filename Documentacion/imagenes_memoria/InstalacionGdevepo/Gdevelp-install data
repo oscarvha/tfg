@@ -52,6 +52,28 @@ Animación al moverse
 
 http://wiki.compilgames.net/doku.php/gdevelop/tutorials/howtomakeeaplatformergame
 Tutorial
+-Errores el program esta en castellano y el manual en ingles por lo que no es muy usable ya que las funciones se llaman de la misma forma.
+-La parte que explica la creación de monedas que recoge el personaje no es correcta y las imagenes no corresponde por lo que es dificil seguirla.
+-La colisión que indica en el tutorial ya no esta, la han actualizado y ahora es distinta.
+-La parte del texto es disitinta
+-La parte de la creacion del movimiento del enemigo esta mal explicada y no se entiende.
+
+
+
+
 
 Otros
 //Un error o aviso importante es que el programa no tienen ningun tipo de aviso de cerrar el proyecto por lo que si cerramos el programa sin querer, no mostrará ningun mensaje por lo que perderemos todos los datos no guardados hasta que no guardas la primera vez, pero el sistema de guardado falla bastante a lo largo de la realización de las pruebas 3 veces se han perdido los datos por no funcionar de una manera correcta
+
+-La creación de objetos no es excesivamente buena sobretodo el darles nombre ya que requiere demasiados clicks ,
+-Fallo en la interfaz cuando creamos un objeto nuevo no podemos intrudcirlo directamente en la escena , es un bug, ya que no nos permite seleccionarlo, debemos selccionar otro anterior movierlo y posteriormente ya podemos intruducir el nuevo
+
+-No posibilidad de modificar los sprites en el programa (al menos no de una manera correcta y funcional hay que editar todo en programas externos ya que solo nos permite agregar imagenes y no modificarlos)
+
+
+
+COLISION ENTRE OBJETO Y PERSONAJE
+EVENTO->SPRITE->COLISION->SELECCIONAR LOS DOS OBJETOS->
+
+*Para mostrar puntuación es necesario "Puntuacion: "+toString(Variable(Score)) que es un pequeño proceso de programacion
+
