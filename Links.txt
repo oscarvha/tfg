@@ -1,3 +1,14 @@
+ESTILO
+http://www.monografias.com/trabajos82/como-escribir-tesis/como-escribir-tesis2.shtml
+
+
+TFGS
+http://rua.ua.es/dspace/handle/10045/36932
+
+
+
+
+
 http://www.aprendegamemaker.com
 tutoriales game maker
 
@@ -10,6 +21,8 @@ SDK
 
 http://www.escueladevideojuegos.net/frameworks-librerias-bibliotecas-recopilacion/
 Frameworks, Librerias, Biblotecas
+
+
 
 
 FRAMEWORK
