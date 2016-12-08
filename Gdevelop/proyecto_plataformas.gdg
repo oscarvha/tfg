@@ -758,6 +758,12 @@
                     </actions>
                     <events />
                 </event>
+                <event disabled="false" folded="false">
+                    <type>BuiltinCommonInstructions::Standard</type>
+                    <conditions />
+                    <actions />
+                    <events />
+                </event>
             </events>
             <layers>
                 <layer name="" visibility="true">

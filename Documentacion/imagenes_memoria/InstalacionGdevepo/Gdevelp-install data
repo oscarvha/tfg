@@ -79,9 +79,12 @@ EVENTO->SPRITE->COLISION->SELECCIONAR LOS DOS OBJETOS->
 
 
 
-//TUTORIAL 2: SHOOTER -JUEGO TANQUES- BEGIINERS TUTORIAL
+//TUTORIAL 2: SHOOTER -JUEGO TANQUES- BEGIINERS TUTORIAL http://wiki.compilgames.net/doku.php/gdevelop/tutorials/beginnertutorial2
 
 MOVIMIENTO EN OCHO DIRECCIONES
+
+Para que un jugador pueda moverse en 8 dirección el proceso:
+	1. Boton secundario en el objeto colocado en la escena->propiedades ->Comportamiento "Agregar" -> Seleccionar Movimiento de arriba-abajo (4-8 direcciones) ->Aceptar
 
 ROTAR OBJETO CON RATON 
 1-PRIMERO MEDIANTE EN EVENTO MARCAR LA ROTACION EVENTO->DEJAR LA CONDICIÓN VACIA-> TODOS LOS OBJETOS-> ROTAR HACIA UNA POSICIÓN -> SELECIONAR OBJETO ->ASIGNAR X al ratón x y a Y POSICION al raton Y ->seleccionar una velocidad angular 0 (es mantener la velocidad del ratón)
@@ -136,7 +139,62 @@ En el caso que se esta creando el objeto seria la bala, y la posición en X , no
 		Objeto : Al que se quiere dar un movimiento.
 		Angulo : Hacia que dirección el objeto se va mover desde su creación 
 		Velocidad : Se indica la velocidad en pixeles del objeto.
-		Amortiguamento: 
+		Amortiguamento: Simula la resistencia que posee el escenario a la bala donde cero es total, y cuando mayor sea la cantidad menor será la resistencia tendrá. Factor multiplicador de la velocidad
+
+7. Para una mejor gestión de la memoria y del juego en general se van a destruir las balas una vez que se encuentren fuera de la pantalla.
+		Ratón sobre el objeto bala->clic derecho del ratón ->otras propiedades->agregar comportamiento ->seleccionar destruir fuera de la pantalla
+		//Crear enemigo cada cierto tiempo 
+
+CREAR ENEMIGOS SE HACE DE MANERA PARECIDA A LA BALA
+pero se indica la posición random en x por el ancho de la escena y un valor negativo en y para que se creen fuera de la pantalla y no a la vista del usuario
+
+
+PARA QUE EL ENEMIGO PERSIGA AL USUARIO:
+   acción->Movimiento->Agregar fuerza para mover hacia un objeto.
+   VARIABLES:
+   Objeto: El que se quiere que se mueva en dirección.
+   Objetivo: El objeto se moverá hacia el objeto que se coloque en este campo.
+   Velocidad (en píxeles por segundo): a la que se deese que el objeto vaya en dirección al objetivo.
+   Amortiguamiento: //COPIAR DE BALA//
+
+ DESTRUCCIÓN DE OBJETO TRÁS COLISIÓN
+
+ 1. Crear evento.
+ 2. Añadir la condición de colisión:
+ 	Condiciones->Todos los objetos->Colision ->Colision
+ 	Variables:
+ 	Objeto:
+ 	Objeto:
+ 3. Crear acción eliminación de objeto:
+    Acción->Todos los objetos->Objetos->Eliminar el objeto
+    VARIABLE:
+    Objeto: El que se quiere eliminar.
+ 4. Para mejorar el proceso se puede repetir el evento anterior para la bala, asi esta tambien se destruye
+
+INSERTAR FONDO A LA ESCENA
+
+1. Crear Objeto sprite con la imagen de fondo
+2. Arrastrar el objeto desde la capa de editor de objetos a la escena.
+3. Boton secundario sobre el objeto fondo que acabos de color.
+4. Cambiar el valor Plano(Z) por el cero o un número negativo para que este por debajo del resto de objetos. Este número siempre tiene que ser el menor que el Plano (Z) de todos los objetos si se quiere que se mantenga siempre como fondo.
+
+
+ //La parte de la animación de explosión no esta bien explicada y si se implementa como indica el tutorial aparecera en un lugar distinto al que se deberia aparecer, 
+ para su correción se pueden realizar dos acciones o ajustar restando a la posición de X e Y para situarla en el lugar correcto o bien crear un nuevo punto en el objeto y que sea este el genere la colisión, en esta prueba se ha obtado por la primera solución
+ A la parte de destruir el jugador le sucede lo mismo
+
+
+ //PARTES AÑADIDAS AL TUTORIAL O MODIFICADAS
+ toda la parte del GAME OVER ha sido implementada de forma diferente a la explicada en el tutorial, ya que no era la manera correcta de realizarla en terminos de gestión de recursos y un mejor flujo de juego //OCULTAR OBJETO//NO CAMBIO DE PANTALLA // NO REJUGABILIDAD.
+
+ PARTES MODIFICADAS:
+  	 SE HA AÑADIDO LA CONDICIÓN QUE PARA CREAR LA BALA DE HABER UN JUGADOR YA QUE SI NO ENTRE EL TIEMPO QUE EL JUGADOR ES DESTRUIDO Y SALE EL MENSAJE DE GAME OVER SE PUEDE
+  	 DISPARAR Y AL NO HABER JUGADOR LAS BALAS SON CREADAS EN EL X = 0 E Y = 0
+ 	 SE HA CREADO UNA NUEVA ESCENA QUE SE CARGA 5 SEGUNDOS DESPUES DE QUE EL JUGADOR SEA DESTRUIDO CON EL MENSAJE GAME OVER Y CON LA POSIBILIDAD DE HACIENDO CLICK EN EL BOTON IZQUIERO DEL RATON VOLVER A JUGAR 
+ 	 SE AÑADIDO UNA VARIABLE DE ESCENA PUNTUACIÓN QUE SE IMPRIMIRÁ CON UN TEXTO EN PANTALLA Y QUE AUMENTARÁ EN 50 CADA VEZ QUE UN ENEMIGO SEA DESTRUIDO.
+ 	 SE AÑADIDO UNA SERIE DE SUBEVENTOS QUE CONFORME LA PUNTUACIÓN AVANZA LA VELOCIDAD DE LO ENMIGOS HACIA EL JUGADOR TAMBIÉN AUMENTA.
+
+
 
 
 PARTES DE PROGRAMACION 
@@ -145,9 +203,16 @@ nombre_del_sprite.X()
 nombre_del_sprite.X(nombre de un punto del sprite)
 aunque la mayoria de estas acciónes se pueden seleccionar des una apartado de formulas resulta complicado encontrar las coordenadas de los objetos dentro del gran número de formulas que tiene el programa. Además por ejemplo puntos dentro de un objeto como en el caso que es necesario para el correcto funcionamiento de la bala no están entre ellas. 
 
-Mostrar una variable por ejemplo de puntuación por pantalla
-*Para mostrar puntuación es necesario "Puntuacion: "+toString(Variable(Score)) que es un pequeño proceso de programacion
 
+
+
+Funciones propios de programación
+Random(800)
+
+
+
+Mostrar una variable por ejemplo de puntuación por pantalla
+*Para mostrar puntuación es necesario "Puntuacion: "+ToString(Variable(Score)) que es un pequeño proceso de programacion
 
 
 
