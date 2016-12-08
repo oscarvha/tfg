@@ -77,3 +77,79 @@ EVENTO->SPRITE->COLISION->SELECCIONAR LOS DOS OBJETOS->
 
 *Para mostrar puntuación es necesario "Puntuacion: "+toString(Variable(Score)) que es un pequeño proceso de programacion
 
+
+
+//TUTORIAL 2: SHOOTER -JUEGO TANQUES- BEGIINERS TUTORIAL
+
+MOVIMIENTO EN OCHO DIRECCIONES
+
+ROTAR OBJETO CON RATON 
+1-PRIMERO MEDIANTE EN EVENTO MARCAR LA ROTACION EVENTO->DEJAR LA CONDICIÓN VACIA-> TODOS LOS OBJETOS-> ROTAR HACIA UNA POSICIÓN -> SELECIONAR OBJETO ->ASIGNAR X al ratón x y a Y POSICION al raton Y ->seleccionar una velocidad angular 0 (es mantener la velocidad del ratón)
+
+//Este evento no permite seleccionar los objetos, en resto si es una opción, (se debe poner el nombre directamente manualmente con lo que puede dar a fallo ) y las acciones o las pulsaciones de teclas tampoco se encuentra ningún atajo con el que poder seleccionarla sino que debemos escribir su código directamente encontrado en el manual 
+//En la interfaz de esta acción aparece un link "ayuda sobre esta acción" pero no funciona lleva a una página que no existe.
+
+
+BALA 
+//La parte que explica el disparo de la bala al pulsar la tecla izquierda del ratón esta mal explicada y muy desestructurada no sigue un orden correcto con lo que es dificil seguirla y hay que interpretarla e intentar comprender lo hay que hacer 
+
+2. En primero lugar para que la bala se cree en el lugar correcto hay que crear  en el sprite desde donde se va crear esa bala un punto adicional a los puntos por defecto centro y origen, ya que si no se crea este punto la bala no se va generar desde el punto del objeto que se desee, por ejemplo el cañon de un tanque, o los misiles de un avión.
+		Ratón sobre el Sprite origen->Botón secundario->Editar ->En el menu visual se hace click sobre la cruz "Editar los puntos de la imagen" ->Crear nuevo punto-> Hacer click en la imagen y situar el punto en el lugar se quiereq que sea origen de la bala.
+
+
+
+//VISUALMENTE PEQUEÑO Y SE HACE COMPLICADO TRABAJAR DE ESTA FORMA NO ES VISUALMENTE BUENO NI CORRECTO LA COLOCACIÓN DE NUEVAS COORDENADAS
+1. Creación de evento que es se va encargar de crear la bala.
+
+2. Se agrega la condición para que al pulsar determinada tecla la bala se cree, en este caso vamos a escoger el boton izquiero del ratón.
+Se encuentra en condicion ->Ratón y Táctil ->Bóton de ratón presionado o toque -> Variables
+	Botón a evaluar: Tecla del ratón al que el programa va escuchar para en cuanto se pulse lanzar las acciones
+En este caso se selecciona a tráves del menu contextual el botón izquierdo. Ahora la bala se crearán balas al pulsar la tecla izquierda del ratón.
+
+3. Para complementar la condicción anterior anterior, se tiene que añadir una condición que evite que se creen infinitas balas y prácticamente al mismo tiempo, se tiene que introducir una restricción temporal para que las balas aparezcan en intervalos de tiempo. Para ellos se agrega al evento la siguiente condición
+	Condicion-> Cronometro y tiempo -> Valor de un cronometro.
+	TIEMPO EN SEGUNDOS: Distancia del intervalo, por ejemplo si se introduce 1 ,el evento se va poder producir cuando el cronometro haya superado el segundo de tiempo.
+	NOMBRE DEL CRONOMETRO: Le damos a el cronometro que va gestionar el tiempo un nombre, además es necesario para poder gestionar la bala ya que una vez el cronometro supere el 1 la condición deja de tener válidez (esto se realizará en el paso siguiente) o por si en otro evento o en otra parte del juego se quiere variar el intervalo (por ejemplo en un shooter de naves al coger un potenciador las balas pueden salir con menos intervalo unas de otras).
+
+Para el caso de prueba se selecciona 0.25 de intervalo y el nombre del cronometro será "bala_tiempo"
+
+4. Ahora hay que introducir la acción para que una vez que una bala sea creada porque se cumplen las dos condiciónes se ha pulsado el botón izquierdo y el tiempo en segundo es mayor que el introducido en el valor del cronometro el cronometro se reinicie ya que sino la condición de tiempo se estaría compliendo todo el tiempo. 
+ 	Acción -> Cronometro y tiempo -> Restablecer un cronometro 
+ 	VARIABLES :
+ 	NOMBRE DEL CRONOMETRO: Se introduce el nombre del cronometro que se desea reiniciar.
+
+En el caso del ejemplo que se esta desarrollando el nombre es "bala_tiempo". Hay que indicar que para un correcto funcionamiento de la funcionalidad esta acción es conveniente que se encuentre siempre en última posición, por debajo de las acciones que se van a realizar a continuación. 
+
+5. La acción del evento para la creación de la bala se encuentra en Todos los objetos -> Objetos -> Crear un objeto-
+
+		VARIABLES: 
+		OBJETO: Que se va crear en la acción.
+		POSICION X: Lugar de creación en X.
+		POSICION Y: Lugar de creación en Y.
+
+En el caso que se esta creando el objeto seria la bala, y la posición en X , nombre_del_objeto.X(punto del sprite creado en el punto 1) y nombre_del_objeto.X(punto del sprite creado en el punto 1),
+
+    // imagen //
+
+
+6. Ahora a esa bala que se ha creado se le debe dar una velocidad de desplazamiento y dirección se introduce el evento en el mismo lugar que la acción anterior.	todos los objetos -> movimiento -> agregar una fuerza (ángulo) -> Esta acciión tiene los siguientes parametros:
+		Objeto : Al que se quiere dar un movimiento.
+		Angulo : Hacia que dirección el objeto se va mover desde su creación 
+		Velocidad : Se indica la velocidad en pixeles del objeto.
+		Amortiguamento: 
+
+
+PARTES DE PROGRAMACION 
+Coordenadas de los objetos
+nombre_del_sprite.X()
+nombre_del_sprite.X(nombre de un punto del sprite)
+aunque la mayoria de estas acciónes se pueden seleccionar des una apartado de formulas resulta complicado encontrar las coordenadas de los objetos dentro del gran número de formulas que tiene el programa. Además por ejemplo puntos dentro de un objeto como en el caso que es necesario para el correcto funcionamiento de la bala no están entre ellas. 
+
+Mostrar una variable por ejemplo de puntuación por pantalla
+*Para mostrar puntuación es necesario "Puntuacion: "+toString(Variable(Score)) que es un pequeño proceso de programacion
+
+
+
+
+
+
