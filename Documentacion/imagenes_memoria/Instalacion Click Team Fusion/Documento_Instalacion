@@ -1,0 +1,55 @@
+http://www.clickteam.com/clickteam-fusion-2-5-free-edition
+
+VERSION FREE
+----------------------------------------
+TIEMPO DE INSTALACION : 2: 25 + 01:07 de actualización posterior
+TAMAÑO DESCARGA : 39,8 MB
+TAMAÑO INSTALADO : 63,2 MB
+
+
+TUTORIAL 1 CACH DE FRUIT
+//JUNTO AL TUTORIAL VIENE UN ARCHIVO A MODO DE EJEMPLO PERO NO FUNCIONA DA ERROR AL ABRIRLO
+//PARA ESTE TUTORIAL NO TIENE SPRITES INCLUIDO POR LO QUE HABRÁ QUE BUSCARLOS y se ha perdido un tiempo buscandolos
+
+
+INSERTAR PERSONAJE
+1 . Seleccionar el Frame haciendo doble clic -> Insert de la barra superior -> New Object -> All Object -> Active 
+
+MOVIMIENTO EN DOS DIRECCION
+
+1-  Clic sobre el objeto en la escena -> Menú lateral izquierdo inferior Propierties -Active" pestaña clic en pestaña "Movement" -> Selecionar lista desplegable type "Eight Directions" -> Clic en direcciones -> Dejar seleccionado solo izquierda y derecha
+			VARIABLES:
+ 					DIRECTIONS:
+ 					Initial direction: 
+ 					Speed:
+ 					Decelaration:
+ 					Aceleration:
+ 					Moving at star:
+ 					stick to obstacle: 
+
+
+
+
+
+ tutorial toda la parte de la animación esta mal explicada y al final se a optado por intentar conseguir el mismo resultado pero de otras posibles, investigando y scando información de la documentación oficial y de otros videos o tutoriales no oficiales.:
+
+ Se ha añadido una condicion para que la animación de movimiento que tiene el personaje solo se inicie cuando el persona esta moviendose cuando esta quieto esta se detiene, 
+ Se ha centrado la camará en el personaje para que este le siga para poder hacer un escenario más grande			
+
+//Programa
+ Muy mala gestión de spirtes movimiento , rescalado, posicionamiento animaciones......
+ Aunque un aspecto positivo es que detecta los numeros de los sprites para las animaciones y te los intrudice el solo por ehjemplo sprite_left_1 el detecta si existe sprite_left_2 /3 en la misma carpeta y si es asi los intruduce al bucle de la animacion 
+
+
+
+
+
+
+
+//OTRO ORDEN DE COSAS IDEA PARA JUEGO
+
+COLORES QUE CAEN DEL CIELO UNOS POSITIVOS Y OTROS NEGATIVO  POR EJEMPLO COGES UN VERDE , VERDE = +1  , UN AMARILLO AMARILLO = + 1 , COGES UN QUITA AMARILLO , AMARILLO = 0; MUERES CUANDO ALGUNO DE LOS COLORES ESTEN EN NEGATIVO , CON POWER ALGUNOS QUE DAN TODOS LOS COLORES Y OTROS QUE QUITAN TODOS.
+
+MODIFACION SI COGES UN AMARILLO AHORA ERES AMARILLO Y TODOS LOS DEMAS COLORES TE RESTA Y SI COGES MAS AMARILLO AUMENTAS TU VIDA , EXITEN POWER UPS DE CAMBIO DE COLOR
+
+
