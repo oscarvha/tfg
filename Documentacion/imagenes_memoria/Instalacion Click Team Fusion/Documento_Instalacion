@@ -11,6 +11,13 @@ TUTORIAL 1 CACH DE FRUIT
 //JUNTO AL TUTORIAL VIENE UN ARCHIVO A MODO DE EJEMPLO PERO NO FUNCIONA DA ERROR AL ABRIRLO
 //PARA ESTE TUTORIAL NO TIENE SPRITES INCLUIDO POR LO QUE HABRÁ QUE BUSCARLOS y se ha perdido un tiempo buscandolos
 
+Tutoriales que se han tenido que mirar
+
+https://www.youtube.com/watch?v=G_zIhYv228A
+https://www.youtube.com/watch?v=G_zIhYv228A
+
+https://www.youtube.com/watch?v=gYKxF1DwYdI
+
 
 INSERTAR PERSONAJE
 1 . Seleccionar el Frame haciendo doble clic -> Insert de la barra superior -> New Object -> All Object -> Active 
@@ -29,12 +36,19 @@ MOVIMIENTO EN DOS DIRECCION
 
 
 
+COLISION ENTRE OBJETOS
+
+ 	 View->Event Editor->New condition ->Seleccionar Objeto y doble clic -> Colisions-> Another Object->
 
 
  tutorial toda la parte de la animación esta mal explicada y al final se a optado por intentar conseguir el mismo resultado pero de otras posibles, investigando y scando información de la documentación oficial y de otros videos o tutoriales no oficiales.:
 
  Se ha añadido una condicion para que la animación de movimiento que tiene el personaje solo se inicie cuando el persona esta moviendose cuando esta quieto esta se detiene, 
- Se ha centrado la camará en el personaje para que este le siga para poder hacer un escenario más grande			
+ Se ha centrado la camará en el personaje para que este le siga para poder hacer un escenario más grande	
+
+ //La parte que explica el movimiento de los objetos que caen esta desactualizada aparece un movimiento llamado pinball que ya no esta disponible en la versión actúal del programa. 
+
+ //No se a conseguido la creación de objeto fuera del frame del programa o vista de cámara de forma random por ejemplo enemigos/monedas o power ups.		
 
 //Programa
  Muy mala gestión de spirtes movimiento , rescalado, posicionamiento animaciones......
@@ -53,3 +67,4 @@ COLORES QUE CAEN DEL CIELO UNOS POSITIVOS Y OTROS NEGATIVO  POR EJEMPLO COGES UN
 MODIFACION SI COGES UN AMARILLO AHORA ERES AMARILLO Y TODOS LOS DEMAS COLORES TE RESTA Y SI COGES MAS AMARILLO AUMENTAS TU VIDA , EXITEN POWER UPS DE CAMBIO DE COLOR
 
 
+//ACEPTA GIF
