@@ -53,11 +53,32 @@ COLISION ENTRE OBJETOS
 //Programa
  Muy mala gestión de spirtes movimiento , rescalado, posicionamiento animaciones......
  Aunque un aspecto positivo es que detecta los numeros de los sprites para las animaciones y te los intrudice el solo por ehjemplo sprite_left_1 el detecta si existe sprite_left_2 /3 en la misma carpeta y si es asi los intruduce al bucle de la animacion 
+ --Cuando insertar un objeto que no va aparecer de momento en la escena tienes que introducirlo aunque sea fuera de la pantalla , si no el programa no te permite tenerlo en los objetos.
+
+
+Que se ha aprendido en este tutorial:
+- Mover personaje en dos direcciones.
+-Colisiones.
+-Insertar fondo a la escena.
+- Destruir objetos cuando estan fuera de la pantalla.
+- Creación aleatoria en posición de objetos.
+- Movimiento de caida por la gravedad de objetos. 
+- Mostrar puntuación en pantalla y sumar.
+
+
+PARA COMPILA NECESITA JAVA RUNTIME
+
+INSERTAR FONDO EN LA ESCENA
+
+insert->new objetect-Background->Background->colocamos sobre la escena en la posición y tamaño que más convenga.
 
 
 
+https://gamedevelopment.tutsplus.com/tutorials/create-an-artillery-game-from-scratch--gamedev-1587
 
-
+SEGUNDO TUTORIAL
+https://gamedevelopment.tutsplus.com/tutorials/create-an-artillery-game-from-scratch--gamedev-1587
+Pese a ser uno de los tutoriales recomendados tiene gran parte de programacion y por lo que se ha descartado cuando se llevaba la mitad de el realizado ya que no sirve para el proposito que estamos buscando. 
 
 
 //OTRO ORDEN DE COSAS IDEA PARA JUEGO
@@ -68,3 +89,26 @@ MODIFACION SI COGES UN AMARILLO AHORA ERES AMARILLO Y TODOS LOS DEMAS COLORES TE
 
 
 //ACEPTA GIF
+
+
+MOVIMIENTO EN 8 DIRECCION
+
+Insert->New Object->Object tipo "Active"-> Propiedades -> Type seleccionar "Eight Directions" 
+VARIABLES:
+	Player: Jugador que va controlar dicho movimiento.
+	Directions: Dirreciones posible, aquí se puede restringir diagonales o alguna dirección. 
+	Inicial direction: Dirrección inicial a la que esta mirando el personaje.
+	Speed: Velocidad de movimiento
+	Deceleration: 
+	Acceleration:
+	Moving at the star:
+	Stick to obstacle.
+
+
+
+	https://www.youtube.com/watch?v=IBRrgnh5rvQ
+
+	Movimiento en ocho direcciones
+	Movimiento automatico de obstaculos.
+	Colisiones con mapa.
+	
