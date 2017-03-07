@@ -1,0 +1,6 @@
+Tile width	: 21
+Tile height	: 21
+Tile X offset	: 2
+Tile Y offset	: 2
+Tile X spacing	: 2
+Tile Y spacing	: 2
