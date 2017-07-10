@@ -1,1 +1,1 @@
-Sprites/
+Sprites/*
