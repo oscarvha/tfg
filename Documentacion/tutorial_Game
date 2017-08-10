@@ -2,125 +2,15 @@ Tutorial Scroll Shooter
 Tutorial en el progRAMA
 El tutorial viene con todos los recursos gráficos necesarios. 
 
-Creación de proecto 
-New-Create Project
-Muy facil
 
 PROGRAMA PUNTOS POSITIVOS.
 	-Permiten crear jerarquia de objetos, es decir por ejemplo un objeto que funcione como padre y todos los objetos hijos tienen el mismo comportamiento principal.
 	-El sistema de organización de los elementos permite una gran gestión.
+	-Se puede insertar comentarios entre los eventos lo que facilita ....
+
 
 PROGRAMACIÓN.
  Hace uso de las funciones random al igual que en la programación. 
-
-INSERTAR BACKGROUND
-
-1. Crear elemento tipo Background
-	Acciones: Panel izquierdo botón secundario sobre carpeta Background. Opción Create Background. Y load from file para cargarlo desde un archivo. 
-	Acetamos. 
-	VARIABLES:
-		Tile Horizontal: Check que confirma si el tile seleccionado como Sprite se va aplicar en horizontal.
-		Tile Vertical: Lo mismo que el anterior pero en vertical.
-		Use for 3D: Se marca esta opción si se está trabajando en juegos 3D. 
-		Textura: Si el Tile lo permite apareceran diversar texturas posibles a aplicar al tile que cambian su aspecto. 
-
-2. Con el background creado habrá que insertarlo en la room o escena. 
-	Acciones: doble clic sobre la room sobre la que queremos aplicar el fondo  >  Panel izquiero pestaña Background > Opción Backgroung y elegir el creado en el punto anterior. 
-	VARIABLES:
-	Tile hor X : Los tiles de la escena que va abarcar el fondo horizoantalmente. 
-	Tile Ver Y: Los tiles que va ocupar verticalmente el fondo. 
-	Hor Speed : Velocidad que fondo se va mover horizontalmente (Haciendo scroll)
-	Ver Speed:  Velocidad del Scroll vertical . 
-
-MUY FACIL. 
-
-
-MOVIMIENTO EN OCHO DIRECCIONES:
-
-1- Insertar el sprite de personaje que se va a mover. 
-	Acciones: Panel izquierdo boton secundario sobre opción Srpite y Create Sprit > Load Sprite y seleccionar la imagen.
-
-2- Creación de objeto personaje. 
- 	Acciones: Panel izquierdo , boton secundario sobre opción Objects y Create Object. 
- 	VARIABLES:
- 	Sprite: Habrá que seleccionar el creado anteriormente.
- 	Visible: 
- 	Solid:
- 	Persistent:
- 	Use Physics:
- 	Depth:
- 	Parent:
- 	Mask:
-
- 3 Añadir al objeto creado el comportamiento de movimiento en 8 direcciones:
- 	Acciones: En la misma pesataña de creación de objeto -> Add Evento y añadirmos evento keyboard -> Seleccionar cada una de las teclas y le añadido el evento movimento en horizontal o vertical. Por ejemplo para la derecha: Seleccionar Right ->En acciones acción Elegir Jump to X 4 (X horizontal , positivo derecha y negativo hacia la izquirda Y vertical, positivo hacia abajo positivo hacia arriba)y marcar la opción relativo esto significa que se movera hacia la derecha desde donde este cuando mayor sea el número más rápido se movera.
-
- Es recomendable añadir a cada dirección un controlador para que no supere los limites de la pantalla. Por ejemplo en el caso de que la pantalla sea de 40 de acho y 120 de alto habrá que añadir una condición if antes del evento de movimiento de la siguiente forma:
- 	1. Añadir arriba de evento de movimiento una acción de tipo "Test variable" y con los siguientes datos para cada dirección:
- 		Izquierda: Variable X valor 40 y operación Mayor que.
- 		Derecha: Variable X valor room_width-40  y operación Menor que.
- 		Arriba: Variable Y valor 40 y operación Mayor que.
- 		Abajo: Variable Y valor room_height-40 y operación Menor que. 
- 	
-
- DISPARO DE BALA.
- 1. Crear objeto personaje como se ha creado en los puntos anterior.
- 2. Crear objeto bala:
- En este ejemplo la bala irá hacia arriba
- Acciones -> Secundario sobre objects y create object -> Seleccionar el Sprite de la bala -> Se añade el evento Create (Este evento sucedera cuando el objeto se crea) -> Se añade la opción al evento Set the vertical Speed con un valor negativo de -8 (conforme el número sea menor la velocidad será mayor)
-
-
- Es recomendable añadir a la bala la opción de eliminación cuando este fuera de la pantalla para ello hay que insertar un evento tipo Outside Room dentro de la categoría otros. Destroy the instance.
-
-
- 3-Para que la bale se dispare hay que añadir la acción al objeto que la va disparar mediante la pulsación de una tecla.
- Acciones: Doble clic sobre el objeto ->Add event seleccionar Keyboard y elegir la tecla que va disparar y se le inerta el evento create instance con el objeto bala.
-
- Para mejorar el disparo de la bala y que no se esten creando constante se le puede añadir un reloj con una vararible para que solo se puedan disparar balas en intervalos. Para realizar esta implementación los pasos son los siguientes:
- 				- Crear el evento Create al objeto y a este evento hay que enlazarle la acción Set Variable para que al crearse el objeto se cree también una variable llamada por ejemplo can_shoot (esta variable hará de reloj para disparar o no) con un valor de true. 
-
- 				-Modificamos las acciones del evento de disparo de la bala añadiendo en primer lugar la condición de que unicamente dispare si la variable can_shoot tiene el valor true Para ello añadimos la acción Test variable comprobando que la variable can_shoot tiene el valor true, para que el disparo sea un subevento tenemos que colocar la acción test en el lugar 1 insertar rodeando el disparo un star block y end block (apartado de acciones control y dentro de este other) con ello el disparo solo se realizara cuando se cumpla la condición impuesta. 
-
- 				-Se introduce en este bloque la acción set variable can_shoot false.
-
- 				-Junto a la acciones anteriores también dentro del bloque se añade una cronometro o alarma que va empezar a contar desde el momento en que se disparé , set alarm en acciones de tipo timming con un valor de 15 steps en la alarma 0.
-
- 			    -Insertar nuevo evento de tipo alarma que examine la alarma 0 (Add Event->Alarm->Seleccionar alarm 0). Este evento sucederá cuando el cronometro incluido en el paso anterior llegue a 15 steps (no segundos)
-
- 			    -Al evento anterior habrá que añadirle una acción set variable y volver a poner la variable can_shoot a true. 
-
- 			Con esto tendríamos un control sobre el disparo para evitar el disparo de infinitas balas de manera continuada. 
-
-
-COLISION:
-Los pasos para crear la colision son los siguientes:
- 	1. Crear los dos objetos de la colisión con sus correspondiente sprites y se introducen en la escena.
- 	2. Añadir el evento colisión a uno de los objetos correspondiente. 
- 	Doble click sobre el objeto-> Add Event ->Colision->Seleccionar el segundo objeto de la colision.
-
-MUY FÁCIL. 
-
-
-DESTRUCCIÓN TRAS COLISIÓN
-
-Para destuir objeto tras colisión habrá que insertar un paso más a la colisión y modificar un paso.
-	
-	En el paso dos el objeto que debe tener el evento de la colisión debe ser el objeto a destuir. 
-	Al evento de colisión se le añade la acción de destruir instancia.
-		Doble clic sobre el objeto -> clic sobre el evento Colision -> Seleccionar acción Destroy instance dentro de las acciónes relativas a objetos -> En el menú contextual elegir la opcion Self en el selector Applies to, si se quiere que también se destruya se crea una nueva opción destroy instance y se marca la opción Other. 
-
-
-MOVIMIENTO EN DOS DIMENSIONES
-
-Para el movimiento en dos dimensiones habrá que crear los dos sprite, el de la plataforma o suelo y el de personaje. 
-	1. Explicar crear un sprite.
-
-	2. Dar el comportamiento de plataforma a al suelo. Para ello primero se habrá de crear el objeto.
-	Acciones: 
-    
-
-
-
 
 
 TUTORIAL 1:
@@ -128,14 +18,6 @@ TUTORIAL 1:
 		-
 		Enseña ha realizar las cosas de otra forma y a que el usuario piense por si mismo formas más optimas de implimentar las cosas. Por ejemplo en el tema de la eliminación de objetos tras destrucción, primero enseña la forma habitual de que se desturya pero posteriormente explica que es más conviente si son objeto recurrentes no destruirlos sino moverlos a otra posición (por ejemplo en el caso de enemigos situarlos fuera de la pantalla para que vuelvan aparecer). 
 	   -Al final el tutorial da unas pautas o próximos pasos se pueden dar para mejorar o hacer más atractivo el tutorial, dichas funcionalidades extra se pueden implentar con los conocimientos adquirididos durante el mismo lo que ayuda a prácticas y afianzar los conocimientos adquiridos. 
-
-
-
-
-
-
-
-
 
 
 
@@ -161,7 +43,12 @@ APRENDIDO:
 	-Mensajes por pantalla. 
 	-Puntuación global y mostrarla por pantalla.
 	-Gestion de vida de personaje y mostrar por pantalla. 
+	-Implementáción de capas ocultas para gestionar colisiones.
+	-Movimiento rebote de objetos, tipo pelota.
+	-Movimiento aleatorios. 
+   
 	
+
 
 
 
@@ -176,3 +63,31 @@ TUTORIAL 2: Game Maker : Drag and drop Platformer Tutorial.
 
 
 -Mejora se ha incorporado el uso de sprites para hacerlo más atractivo.
+
+
+TUTORIAL 2 :  Breakout Tutorial
+
+El tutorial viene con todos los recursos. 
+
+Bueno:
+ tiene links a recuersos de aprendizaje, por ejemplo cuando explica la gestión de sprites incluye un enlace a el uso avanzado de sprites por si queremos aprender más de dicho apartado. 
+ Visualmente muy atractivo. 
+
+Malo:
+En algunas  partes el texto es demasiado denso y tiene pocas imágenes explicativas.
+No explica como implementar los muros para que la bola no se salga de la pantalla,
+No se ha podido implementar el fondo animado la explicación no esta clara y no se ha entendido
+
+
+[(16,98€ - 11,39€) x 100] / 11,39€ = 49,078%
+
+
+
+Modificación implementación para que la bola no se salga de pantalla:
+
+
+
+5.	Ahora hay que introducir la acción para que una vez que una bala sea creada porque se cumplen las dos condiciones se ha pulsado el botón izquierdo y el tiempo en segundo es mayor que el introducido en el valor del cronometro el cronometro se reinicie ya que sino la condición de tiempo se estaría cumpliendo todo el tiempo. Hay que indicar que para un correcto funcionamiento de la funcionalidad esta acción es conveniente que se encuentre siempre en última posición, por debajo de las acciones que se van a realizar a continuación.
+
+Ahora hay que crear el disparo de la bala que se ejecutará una vez se cumplan las dos condiciones creadas en los pasos anteriores. Es aconsejable que dicha opción se encuentre siempre en la última posicion. 
+	
